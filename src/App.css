@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  width: 98vw;
+  background-color: black;
+  color: white;
+  justify-content: space-between;
+  padding: 0 1vw;
+}
+
+.nav img {
+  width: 5vw;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  text-align: center;
+  padding: 2vh;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+  background-color: grey;
+  height: 81vh;
+}
+
+.sidebar a {
+  padding: 1vw;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  margin: 2vh;
+  border-radius: 7%;
+  background-color: white;
+}

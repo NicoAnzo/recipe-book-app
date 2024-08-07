@@ -1,19 +1,29 @@
 body {
   margin: 0;
   padding: 0;
-  position: relative;
-  height: 100vh;
-  width: 100vw;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#main {
+  display: flex;
+  flex: 1 1 100vh;
 }
 
 .nav {
-  position: relative;
+  position: sticky;
+  top: 0;
+  flex: 0 1 auto;
   display: flex;
-  width: 98vw;
   background-color: black;
   color: white;
   justify-content: space-between;
   padding: 0 1vw;
+  z-index: 10;
 }
 
 .nav img {
@@ -21,24 +31,28 @@ body {
 }
 
 .footer {
-  position: absolute;
+  position: sticky;
   bottom: 0;
-  width: 100vw;
+  flex: 0 1 auto;
   text-align: center;
-  padding: 2vh;
+  padding: 2vh 0;
   background-color: black;
-  color: white;
+  z-index: 10;
+}
+
+.footer a {
   text-decoration: none;
+  color: white;
 }
 
 .sidebar {
-  position: absolute;
-  left: 0;
+  flex: 0 1 20vw;
   display: flex;
   flex-direction: column;
   padding: 1vw;
   background-color: grey;
-  height: 81vh;
+  height: 100%;
+  z-index: 8
 }
 
 .sidebar a {
@@ -49,4 +63,34 @@ body {
   margin: 2vh;
   border-radius: 7%;
   background-color: white;
+}
+
+
+.RecipeList {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  z-index: 1;
+  margin-bottom: 10vh;
+}
+
+.recipes {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.recipe-card {
+  border: 1px solid black;
+  margin: 1vh 2vh;
+  padding: 1vh;
+  border-radius: 2vh;
+  width: 20vh;
+}
+.recipe-card img {
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
 }

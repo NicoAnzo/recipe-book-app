@@ -22,13 +22,12 @@ function App() {
 
           <Routes>
             <Route path="/" element={<DashboardPage />} />
-            <Route path="/" element={<ItemDetailsPage />} />
-            <Route path="/" element={<AboutPage />} />
-            <Route path="/" element={<NotFoundPage />} />
-
+            <Route path="/itemDetailsPage" element={<ItemDetailsPage />} />
+            <Route path="/aboutPage" element={<AboutPage />} />
+            <Route path="/notFoundPage" element={<NotFoundPage />} />
           </Routes>
 
-          <Recipes />
+          {/* <Recipes /> */}
 
 
         </main>

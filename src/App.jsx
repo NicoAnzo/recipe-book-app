@@ -1,6 +1,6 @@
 import { NavBar } from './components/NavBar'
 import { SideBar } from './components/SideBar'
-import { Recipes } from './components/Recipes'
+import { RecipesList } from './components/RecipesList'
 import { Footer } from './components/Footer'
 import { Route, Routes } from 'react-router-dom'
 import { DashboardPage } from './components/DashboardPage'
@@ -27,7 +27,7 @@ function App() {
             <Route path="/notFoundPage" element={<NotFoundPage />} />
           </Routes>
 
-          {/* <Recipes /> */}
+          {/* <RecipesList /> */}
 
 
         </main>

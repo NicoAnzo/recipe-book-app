@@ -1,10 +1,10 @@
 import { RecipeCard } from "./RecipeCard"
 
-export function Recipes () {
+export function RecipesList () {
 
     return (
         <section className="RecipeList">
-            <div> <h1>Recipes</h1> </div>
+            <div> <h1>Recipes List</h1> </div>
             <RecipeCard />
         </section>
     );

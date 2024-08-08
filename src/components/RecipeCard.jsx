@@ -1,12 +1,12 @@
-import recipes from "../data/recipes.json"
+import RecipesList from "../data/recipes.json"
 import { useState } from "react"
 
 export function RecipeCard () {
 
-    const [currRecipes, setCurrRecipes] = useState(recipes)
+    const [recipesToDisplay, setRecipesToDisplay] = useState(RecipesList)
 
     const deleteRecipe = recipeId => {
-        setCurrRecipes(currRecipes.filter(recipe => recipe.id !== recipeId))
+        setRecipesToDisplay(recipesToDisplay.filter(recipe => recipe.id !== recipeId))
     }
 
     const renderImage = (recipeDetails) => {
@@ -19,7 +19,7 @@ export function RecipeCard () {
 
     return (
         <div className="recipes">
-            {currRecipes.map((recipeDetails) => { 
+            {recipesToDisplay.map((recipeDetails) => { 
                 return (
                     <div key={recipeDetails.id} className="recipe-card">
                         

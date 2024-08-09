@@ -1,25 +1,24 @@
-import RecipeList from "../data/recipes.json"
-import { useState } from "react"
+import { Link, useParams } from "react-router-dom";
 
-export function RecipeCard () {
+export function RecipeCard (props) {
 
-    const [recipesToDisplay, setRecipesToDisplay] = useState(RecipeList)
+    const {recipeId} = useParams();
 
-    const deleteRecipe = recipeId => {
-        setRecipesToDisplay(recipesToDisplay.filter(recipe => recipe.id !== recipeId))
-    }
-
+    const recipe = props.recipesToDisplay.find( (recipeObj) => {
+        return recipeObj.id == recipeId;
+    });
+   
     const renderImage = (recipeDetails) => {
         if(recipeDetails.image === undefined) return;
 
         return (
             < img src = { recipeDetails.image } alt = "Recipe image" />
         )
-}
+    }
 
     return (
         <div className="recipes">
-            {recipesToDisplay.map((recipeDetails) => { 
+            {props.recipesToDisplay.map((recipeDetails) => { 
                 return (
                     <div key={recipeDetails.id} className="recipe-card">
                         
@@ -30,7 +29,10 @@ export function RecipeCard () {
                         <p>Servings: {recipeDetails.servings}</p>
                     
                         <p>
-                            <button onClick={() => deleteRecipe(recipeDetails.id)}>Delete</button>
+                            <button onClick={() => props.callbackToDelete(recipeDetails.id)}>Delete</button>
+                        </p>
+                        <p>
+                            <Link to={`/itemDetails/${recipeDetails.id}`}>More Info</Link>
                         </p>
                     </div>
                 )

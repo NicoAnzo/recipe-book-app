@@ -1,6 +1,6 @@
 import { RecipeCard } from "./RecipeCard"
 
-export function RecipesList () {
+export function RecipeList () {
 
     return (
         <section className="RecipeList">

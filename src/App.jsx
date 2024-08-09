@@ -1,6 +1,6 @@
 import { NavBar } from './components/NavBar'
 import { SideBar } from './components/SideBar'
-import { RecipesList } from './components/RecipesList'
+import { RecipeList } from './components/RecipeList'
 import { Footer } from './components/Footer'
 import { Route, Routes } from 'react-router-dom'
 import { DashboardPage } from './components/DashboardPage'

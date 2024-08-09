@@ -1,9 +1,9 @@
-import RecipesList from "../data/recipes.json"
+import RecipeList from "../data/recipes.json"
 import { useState } from "react"
 
 export function RecipeCard () {
 
-    const [recipesToDisplay, setRecipesToDisplay] = useState(RecipesList)
+    const [recipesToDisplay, setRecipesToDisplay] = useState(RecipeList)
 
     const deleteRecipe = recipeId => {
         setRecipesToDisplay(recipesToDisplay.filter(recipe => recipe.id !== recipeId))

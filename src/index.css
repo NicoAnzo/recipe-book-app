@@ -1,139 +1,155 @@
 body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  #container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  #main {
-    display: flex;
-    flex: 1 1 100vh;
-  }
-  
-  .nav {
-    position: sticky;
-    top: 0;
-    flex: 0 1 auto;
-    display: flex;
-    background-color: black;
-    color: white;
-    justify-content: space-between;
-    padding: 0 1vw;
-    z-index: 10;
-  }
-  
-  .nav img {
-    width: 5vw;
-  }
-  
-  .footer {
-    position: sticky;
-    bottom: 0;
-    flex: 0 1 auto;
-    text-align: center;
-    padding: 2vh 0;
-    background-color: black;
-    z-index: 10;
-  }
-  
-  .footer a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  .sidebar {
-    flex: 0 1 20vw;
-    display: flex;
-    flex-direction: column;
-    padding: 1vw;
-    background-color: grey;
-    height: 100%;
-    z-index: 8
-  }
-  
-  .sidebar a {
-    padding: 1vw;
-    text-decoration: none;
-    color: black;
-    border: 1px solid black;
-    margin: 2vh;
-    border-radius: 7%;
-    background-color: white;
-  }
-  
-  
-  .RecipeList {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    height: 100%;
-    z-index: 1;
-    margin-bottom: 10vh;
-  }
-  
-  .recipes {
-  
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  
-  .recipe-card {
-    border: 1px solid black;
-    margin: 1vh 2vh;
-    padding: 1vh;
-    border-radius: 2vh;
-    width: 20vh;
-  }
-  .recipe-card img {
-    width: 10vh;
-    height: 10vh;
-    border-radius: 50%;
-  }
-  
-  .notFoundPage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    padding: 3rem;
-    border: 1px solid grey;
-    border-radius: 0.5rem;
-    background-color: rgb(245, 245, 235);
-  }
-  
-  .notFoundPage h1 {
-    font-size: 3rem;
-  }
-  
-  .notFoundPage a {
-    text-decoration: none;
-    color: cornflowerblue;
-  }
-  
-  .aboutPage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5rem;
-  }
-  
-  .members {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .members div {
-    margin: 3rem;
-    padding: 1rem;
-    height: 40vh;
-    width: 20vw;
-    border: 1px solid black;
-    border-radius: 1rem;
-    background-color: lavender;
-  }
-  
+margin: 0;
+padding: 0;
+}
+
+#container {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+#main {
+display: flex;
+flex: 1 1 100vh;
+}
+
+.nav {
+position: sticky;
+top: 0;
+flex: 0 1 auto;
+display: flex;
+background-color: black;
+color: white;
+justify-content: space-between;
+padding: 0 1vw;
+z-index: 10;
+}
+
+.nav img {
+width: 5vw;
+}
+
+.footer {
+position: sticky;
+bottom: 0;
+flex: 0 1 auto;
+text-align: center;
+padding: 2vh 0;
+background-color: black;
+z-index: 10;
+}
+
+.footer a {
+text-decoration: none;
+color: white;
+}
+
+.sidebar {
+flex: 0 1 20vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 1vw;
+background-color: grey;
+height: 100%;
+z-index: 8
+}
+
+.sidebar button {
+padding: 0.5vh;
+margin: 1vh;
+}
+
+.recipe-list-title {
+  text-align: center;
+}
+
+.recipe-list {
+display: flex;
+flex-wrap: wrap;
+text-align: center;
+height: 100%;
+z-index: 1;
+margin-bottom: 5vh;
+margin-left: 5vh;
+}
+
+.recipes {
+display: flex;
+flex-flow: wrap;
+}
+
+.recipe-card {
+border: 1px solid black;
+margin: 2vh 2vh;
+padding: 1vh;
+border-radius: 2vh;
+width: 20vh;
+}
+
+.recipe-card img {
+width: 10vh;
+height: 10vh;
+border-radius: 50%;
+}
+
+.notFoundPage {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: auto;
+padding: 3rem;
+border: 1px solid grey;
+border-radius: 0.5rem;
+background-color: rgb(245, 245, 235);
+}
+
+.notFoundPage h1 {
+font-size: 3rem;
+}
+
+.notFoundPage a {
+text-decoration: none;
+color: cornflowerblue;
+}
+
+.aboutPage {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 5rem;
+}
+
+.members {
+display: flex;
+justify-content: space-around;
+}
+
+.members div {
+margin: 3rem;
+padding: 1rem;
+height: 40vh;
+width: 20vw;
+border: 1px solid black;
+border-radius: 1rem;
+background-color: lavender;
+}
+
+.addRecipe {
+  display: flex;
+  flex-direction: column;
+  margin: 5vh;
+}
+
+.addRecipe form {
+  display: flex;
+  flex-direction: column;
+}
+
+.addRecipe label {
+}
+
+.addRecipe input {
+  margin: 2vh;
+}

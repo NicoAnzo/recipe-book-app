@@ -14,7 +14,6 @@ import RecipeList from "./data/recipes.json"
 import './App.css'
 
 
-
 function App() {
 
   const [recipesToDisplay, setRecipesToDisplay] = useState(RecipeList)
@@ -38,7 +37,7 @@ function App() {
 
           <Routes>
             <Route path="/" element={<DashboardPage recipesToDisplay={recipesToDisplay} callbackToDelete={deleteRecipe}/>} />
-            <Route path="/itemDetails/:movieId" element={<ItemDetailsPage recipesToDisplay={recipesToDisplay}/>} />
+            <Route path="/itemDetails/:recipeId" element={<ItemDetailsPage recipesToDisplay={recipesToDisplay}/>} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/notFound" element={<NotFoundPage />} />
           </Routes>

@@ -1,42 +1,25 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export function RecipeCard (props) {
 
-    const {recipeId} = useParams();
-
-    const recipe = props.recipesToDisplay.find( (recipeObj) => {
-        return recipeObj.id == recipeId;
-    });
-   
-    const renderImage = (recipeDetails) => {
-        if(recipeDetails.image === undefined) return;
-
-        return (
-            < img src = { recipeDetails.image } alt = "Recipe image" />
-        )
-    }
-
     return (
         <div className="recipes">
-            {props.recipesToDisplay.map((recipeDetails) => { 
-                return (
-                    <div key={recipeDetails.id} className="recipe-card">
+            
+                    <div className="recipe-card">
                         
-                    { renderImage(recipeDetails) }
+                        < img src = { props.recipeDetails.image } alt = "Recipe image" />
     
-                        <h3>{recipeDetails.name}</h3>
-                        <p>Calories: {recipeDetails.calories}</p>
-                        <p>Servings: {recipeDetails.servings}</p>
+                        <h3>{props.recipeDetails.name}</h3>
+                        <p>Calories: {props.recipeDetails.calories}</p>
+                        <p>Servings: {props.recipeDetails.servings}</p>
                     
                         <p>
-                            <button onClick={() => props.callbackToDelete(recipeDetails.id)}>Delete</button>
+                            <button onClick={() => props.callbackToDelete(props.recipeDetails.id)}>Delete</button>
                         </p>
                         <p>
-                            <Link to={`/itemDetails/${recipeDetails.id}`}>More Info</Link>
+                            <Link to={`/itemDetails/${props.recipeDetails.id}`}>More Info</Link>
                         </p>
-                    </div>
-                )
-            })}
-        </div>
+                    </div> 
+        </div>   
     );
 }

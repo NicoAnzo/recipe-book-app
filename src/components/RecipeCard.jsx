@@ -1,16 +1,22 @@
 import { Link } from "react-router-dom";
+import defaultImage from "../../images/defaultImage.png"
 
 export function RecipeCard (props) {
 
-    // Add conditional rendering. When a recipe doesn't have an image, show a default image.
-
+    const handleImageError = (e) => {
+        e.target.src = defaultImage;
+    };
 
     return (
         <div className="recipes">
             
                     <div className="recipe-card">
                         
-                        < img src = { props.recipeDetails.image } alt = "Recipe image" />
+                        < img 
+                            src = { props.recipeDetails.image } 
+                            alt = "Recipe image" 
+                            onError={handleImageError}
+                        />
     
                         <h3>{props.recipeDetails.name}</h3>
                         

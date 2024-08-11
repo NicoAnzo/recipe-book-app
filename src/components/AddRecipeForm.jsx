@@ -65,7 +65,7 @@ export function AddRecipeForm (props) {
                          name="calories"
                          placeholder="500"
                          min={100}
-                         max={2000}
+                         max={5000}
                          value={calories}
                          onChange={(e) => { setCalories(e.target.value) }}
                      />

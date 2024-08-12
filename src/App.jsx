@@ -14,6 +14,7 @@ import RecipeList from "./data/recipes.json"
 
 import './App.css'
 import { AddRecipeForm } from './components/AddRecipeForm'
+import { EditRecipeForm } from './components/EditRecipeForm';
 
 
 function App() {
@@ -34,6 +35,11 @@ function App() {
 
   }
 
+  const updateRecipe = (updatedRecipe) => {
+    setRecipesToDisplay(recipesToDisplay.map((recipe) => {
+      return recipe.id === updatedRecipe.id ? updatedRecipe : recipe;
+    }));    
+  };
 
   const deleteRecipe = (recipeId) => {
     
@@ -54,10 +60,11 @@ function App() {
 
           <Routes>
             <Route path="/" element={<DashboardPage recipesToDisplay={recipesToDisplay} callbackToDelete={deleteRecipe}/>} />
-            <Route path="/itemDetails/:recipeId" element={<ItemDetailsPage recipesToDisplay={recipesToDisplay}/>} />
+            <Route path="/itemDetails/:recipeId" element={<ItemDetailsPage recipesToDisplay={recipesToDisplay} />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/notFound" element={<NotFoundPage />} />
             <Route path='/addRecipe' element={<AddRecipeForm callbackToCreate={createRecipe}/>} />
+            <Route path="/itemDetails/:recipeId/edit" element={<EditRecipeForm recipesToDisplay={recipesToDisplay} callbackToUpdate={updateRecipe}/>} />
           </Routes>
 
         </main>

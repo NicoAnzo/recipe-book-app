@@ -1,9 +1,10 @@
-import { Link, useParams } from "react-router-dom";
-import defaultImage from "../../images/defaultImage.png"
+import { Link, useParams, useNavigate } from "react-router-dom";
+import defaultImage from "../../images/defaultImage.png";
 
 export function ItemDetailsPage(props) {
 
   const {recipeId} = useParams();
+  const navigate = useNavigate();
 
   const recipe = props.recipesToDisplay.find((recipeObj) => {
     return recipeObj.id === recipeId;
@@ -13,6 +14,9 @@ export function ItemDetailsPage(props) {
     e.target.src = defaultImage;
   };
   
+  const handleEdit = () => {
+    navigate(`/itemDetails/${recipeId}/edit`);
+  };
 
   return (
     <>
@@ -38,6 +42,8 @@ export function ItemDetailsPage(props) {
          
         </div>
 
+        <button onClick={handleEdit}>Edit Recipe</button>
+
         <p>
           <Link to="/">Back</Link>
         </p>
@@ -46,3 +52,5 @@ export function ItemDetailsPage(props) {
     </>
   );
 }
+
+

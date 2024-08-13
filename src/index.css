@@ -11,7 +11,8 @@ min-height: 100vh;
 
 #main {
 display: flex;
-flex: 1 1 100vh;
+flex: 1;
+align-items: stretch:
 }
 
 .nav {
@@ -46,28 +47,34 @@ color: white;
 }
 
 .sidebar {
-flex: 0 1 20vw;
+flex: 0 0 10vw;
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: 1vw;
-background-color: grey;
-height: 100%;
-z-index: 8
+padding: 2vw;
+background-color: rgba(249, 255, 126, 0.551);
+z-index: 8;
+gap: 2vh;
 }
 
 .sidebar button {
-padding: 0.5vh;
-margin: 1vh;
+padding: 1vh;
+}
+
+.recipe-page {
+background-color: rgb(208, 207, 207);
 }
 
 .recipe-list-title {
-  text-align: center;
+text-align: center;
+color: black;
+font-size: 30px;
 }
 
 .recipe-list {
 display: flex;
 flex-wrap: wrap;
+flex-grow: 1;
 text-align: center;
 height: 100%;
 z-index: 1;
@@ -86,6 +93,7 @@ margin: 2vh 2vh;
 padding: 1vh;
 border-radius: 2vh;
 width: 20vh;
+background-color: white;
 }
 
 .recipe-card img {
@@ -116,14 +124,17 @@ color: cornflowerblue;
 
 .aboutPage {
 display: flex;
+flex-grow: 1;
 flex-direction: column;
 align-items: center;
-margin-top: 5rem;
+justify-content: center;
+background-color: rgb(208, 207, 207);
+font-size: 30px;
 }
 
 .members {
 display: flex;
-justify-content: space-around;
+font-size: 20px;
 }
 
 .members div {
@@ -131,15 +142,17 @@ margin: 3rem;
 padding: 1rem;
 height: 40vh;
 width: 20vw;
-border: 1px solid black;
+border: 1px solid white;
 border-radius: 1rem;
-background-color: lavender;
+background-color: rgba(249, 255, 126, 0.551);
 }
 
 .addRecipe {
   display: flex;
   flex-direction: column;
-  margin: 5vh;
+  flex-grow: 1;
+  padding: 5vh;
+  background-color: rgb(208, 207, 207);
 }
 
 .addRecipe form {
@@ -177,4 +190,8 @@ height: 30vw;
   background-color: darkseagreen;
   border: 1px solid black;
   padding: 0.2vw;
+}
+
+a.active button {
+  background-color: rgb(208, 207, 207);
 }

@@ -1,20 +1,20 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export function SideBar () {
 
     return (
         <section className="sidebar">
-            <Link to="/">
+            <NavLink to="/">
                 <button>Home</button>
-            </Link>
+            </NavLink>
 
-            <Link to="/about">
+            <NavLink to="/about">
                 <button>About</button>
-            </Link>
+            </NavLink>
 
-            <Link to="/addRecipe">
+            <NavLink to="/addRecipe">
                 <button>Add Recipe</button>
-            </Link>
+            </NavLink>
         </section>
     )
 }

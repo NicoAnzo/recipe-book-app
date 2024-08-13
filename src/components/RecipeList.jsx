@@ -5,7 +5,7 @@ export function RecipeList (props) {
     return (
         <section>
             <div className="recipe-list-title"> 
-                <h1>List of Recipes</h1> 
+                <h1>👨‍🍳 List of Recipes 👨‍🍳</h1> 
             </div>
 
             <div className="recipe-list">

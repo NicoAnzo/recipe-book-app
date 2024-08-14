@@ -28,25 +28,25 @@ export function ItemDetailsPage(props) {
 
         <div className="recipe-details-description">
 
-          <div>
+          <div className="image-details-page">
            <img src={recipe.image} 
            alt="recipe image"
            onError={handleImageError} 
            />
           </div>
 
-          <div>
+          <div className="item-info-details">
             <h4>Calories: {recipe.calories}</h4>
             <p>Servings: {recipe.servings}</p>
           </div>
          
         </div>
-        <div>
+        <div className="edit-recipe-btn">
           <button onClick={handleEdit}>Edit Recipe</button>
         </div>
-        <p>
-          <Link to="/">Back</Link>
-        </p>
+        <div className="back-btn">
+          <Link to="/"><button>Back</button></Link>
+        </div>
 
       </div>
     </div>

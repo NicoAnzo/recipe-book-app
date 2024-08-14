@@ -19,7 +19,7 @@ export function ItemDetailsPage(props) {
   };
 
   return (
-    <>
+    <div className="ItemDetailsPage">
       <div className="recipe-details-box">
 
         <div>
@@ -41,15 +41,15 @@ export function ItemDetailsPage(props) {
           </div>
          
         </div>
-
-        <button onClick={handleEdit}>Edit Recipe</button>
-
+        <div>
+          <button onClick={handleEdit}>Edit Recipe</button>
+        </div>
         <p>
           <Link to="/">Back</Link>
         </p>
 
       </div>
-    </>
+    </div>
   );
 }
 

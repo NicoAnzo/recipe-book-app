@@ -22,12 +22,12 @@ export function RecipeCard (props) {
                         <h3>{props.recipeDetails.name}</h3>
                         {isLowCalorie && <span className="low-calorie">Low Calorie</span>}
                         <p>
-                            <button onClick={() => props.callbackToDelete(props.recipeDetails.id)}>Delete</button>
+                            <Link to={`/itemDetails/${props.recipeDetails.id}`}>
+                                <button className="more-info-btn">More Info</button>
+                            </Link>
                         </p>
                         <p>
-                            <Link to={`/itemDetails/${props.recipeDetails.id}`}>
-                                <button>More Info</button>
-                            </Link>
+                            <button className="delete-btn" onClick={() => props.callbackToDelete(props.recipeDetails.id)}>Delete</button>
                         </p>
                     </div> 
         </div>   

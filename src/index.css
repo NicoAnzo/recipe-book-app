@@ -1,116 +1,131 @@
 body {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #container {
-display: flex;
-flex-direction: column;
-min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 #main {
-display: flex;
-flex: 1;
-align-items: stretch:
+  display: flex;
+  flex: 1;
+  align-items: stretch;
 }
 
 .nav {
-position: sticky;
-top: 0;
-flex: 0 1 auto;
-display: flex;
-background-color: black;
-color: white;
-justify-content: space-between;
-padding: 0 1vw;
-z-index: 10;
+  position: sticky;
+  top: 0;
+  flex: 0 1 auto;
+  display: flex;
+  background-color: black;
+  color: white;
+  justify-content: space-between;
+  padding: 0 1vw;
+  z-index: 10;
 }
 
 .nav img {
-width: 5vw;
+  width: 5vw;
 }
 
 .footer {
-position: sticky;
-bottom: 0;
-flex: 0 1 auto;
-text-align: center;
-padding: 2vh 0;
-background-color: black;
-z-index: 10;
+  position: sticky;
+  bottom: 0;
+  flex: 0 1 auto;
+  text-align: center;
+  padding: 2vh 0;
+  background-color: black;
+  z-index: 10;
 }
 
 .footer a {
-text-decoration: none;
-color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .sidebar {
-flex: 0 0 10vw;
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 2vw;
-background-color: rgba(249, 255, 126, 0.551);
-z-index: 8;
-gap: 2vh;
+  flex: 0 0 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vw;
+  background-color: rgba(249, 255, 126, 0.551);
+  z-index: 8;
+  gap: 2vh;
 }
 
 .sidebar button {
-padding: 1vh;
+padding:  
 }
 
 .recipe-page {
-background-color: rgb(208, 207, 207);
+  background-color: rgb(208, 207, 207);
 }
 
 .recipe-list-title {
-text-align: center;
-color: black;
-font-size: 30px;
+  text-align: center;
+  color: black;
+  font-size: 30px;
 }
 
 .recipe-list {
-display: flex;
-flex-wrap: wrap;
-flex-grow: 1;
-text-align: center;
-height: 100%;
-z-index: 1;
-margin-bottom: 5vh;
-margin-left: 5vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  text-align: center;
+  height: 100%;
+  z-index: 1;
+  margin-bottom: 5vh;
+  margin-left: 5vh;
 }
 
 .recipes {
-display: flex;
-flex-flow: wrap;
+  display: flex;
+  flex-flow: wrap;
 }
 
 .recipe-card {
-border: 1px solid black;
-margin: 2vh 2vh;
-padding: 1vh;
-border-radius: 2vh;
-width: 20vh;
-background-color: white;
+  border: 1px solid black;
+  margin: 2vh 2vh;
+  padding: 1vh;
+  border-radius: 2vh;
+  width: 20vh;
+  background-color: white;
 }
 
 .recipe-card img {
-width: 10vh;
-height: 10vh;
-border-radius: 50%;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+}
+
+.more-info-btn {
+  background-color: rgb(182, 249, 182);
+  font-weight: bold;
+  padding: 1vh;
+  border-radius: 1vh;
+  margin-top: 1vh;
+}
+
+.delete-btn {
+  background-color: red;
+  font-weight: bold;
+  padding: 1vh;
+  border-radius: 1vh;
 }
 
 .notFoundPage {
-display: flex;
-flex-direction: column;
-align-items: center;
-margin: auto;
-padding: 3rem;
-border: 1px solid grey;
-border-radius: 0.5rem;
-background-color: rgb(245, 245, 235);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 3rem;
+  border: 1px solid grey;
+  border-radius: 0.5rem;
+  background-color: rgb(245, 245, 235);
 }
 
 .notFoundPage h1 {
@@ -123,18 +138,18 @@ color: cornflowerblue;
 }
 
 .aboutPage {
-display: flex;
-flex-grow: 1;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-background-color: rgb(208, 207, 207);
-font-size: 30px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(208, 207, 207);
+  font-size: 30px;
 }
 
 .members {
-display: flex;
-font-size: 20px;
+  display: flex;
+  font-size: 20px;
 }
 
 .members div {
@@ -144,7 +159,7 @@ height: 40vh;
 width: 20vw;
 border: 1px solid white;
 border-radius: 1rem;
-background-color: rgba(249, 255, 126, 0.551);
+background-color: rgb(180, 252, 252);
 }
 
 .addRecipe {
@@ -164,20 +179,31 @@ background-color: rgba(249, 255, 126, 0.551);
   margin: 2vh;
 }
 
-.recipe-details-box {
-margin: 5vh;
-padding: 2vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 50vw;
-height: 30vw;
+.ItemDetailsPage {
+  background-color: rgb(208, 207, 207);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.recipe-details-box {
+  margin: 5vh;
+  padding: 2vh;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50vw;
+  height: 30vw;
+}
+
 
 .recipe-details-description {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 5vh;
 }
 
@@ -187,9 +213,12 @@ height: 30vw;
 }
 
 .low-calorie {
-  background-color: darkseagreen;
+  background-color: rgb(18, 144, 18);
+  color: white;
   border: 1px solid black;
-  padding: 0.2vw;
+  font-weight: bold;
+  padding: 1vh;
+  border-radius: 1vh;
 }
 
 a.active button {

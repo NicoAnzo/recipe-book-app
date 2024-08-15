@@ -1,5 +1,5 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
-import defaultImage from "../../images/defaultImage.png";
+import defaultImage1 from "../../images/defaultImage1.jpg";
 
 export function ItemDetailsPage(props) {
 
@@ -11,7 +11,7 @@ export function ItemDetailsPage(props) {
   });
 
   const handleImageError = (e) => {
-    e.target.src = defaultImage;
+    e.target.src = defaultImage1;
   };
   
   const handleEdit = () => {

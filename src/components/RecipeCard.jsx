@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import defaultImage from "../../images/defaultImage.png"
+import defaultImage1 from "../../images/defaultImage1.jpg"
 
 export function RecipeCard (props) {
 
     const handleImageError = (e) => {
-        e.target.src = defaultImage;
+        e.target.src = defaultImage1;
     };
 
     const isLowCalorie = props.recipeDetails.calories / props.recipeDetails.servings < 200;
